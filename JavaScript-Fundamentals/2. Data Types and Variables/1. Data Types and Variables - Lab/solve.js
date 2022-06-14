@@ -1,4 +1,5 @@
 function solve() {
-  console.log(Boolean(10 / "p"));
+  let a = 'zoranNikolov'
+  console.log(a.indexOf('o', 9));
 }
 solve();

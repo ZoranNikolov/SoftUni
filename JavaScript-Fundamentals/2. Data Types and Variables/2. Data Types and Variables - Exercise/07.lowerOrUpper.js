@@ -1,11 +1,12 @@
 function lowerOrUpper(char) {
-  let result = "";
-  let charToLower = char.toLowerCase();
-  if (charToLower === char) {
-    console.log("lower-case");
-  } else {
-    console.log("upper-case");
-  }
+
+  console.log(char === char.toLowerCase() ? "lower-case" : "upper-case");
+  
+  // if (char === char.toLowerCase()) {
+  //   console.log("lower-case");
+  // } else {
+  //   console.log("upper-case");
+  // }
 }
 lowerOrUpper("L");
-lowerOrUpper('f')
+lowerOrUpper("f");
