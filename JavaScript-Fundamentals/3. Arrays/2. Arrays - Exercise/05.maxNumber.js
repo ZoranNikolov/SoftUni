@@ -1,17 +1,21 @@
 function maxNumber(arr) {
   let total = [];
-  for (let i = 0; i < arr.length; i++) {
+  let arrL = arr.length;
+
+  for (let i = 0; i < arrL; i++) {
     let isTopInt = true;
-    for (let j = i + 1; j < arr.length; j++) {
+    for (let j = i + 1; j < arrL; j++) {
       if (arr[i] <= arr[j]) {
         isTopInt = false;
         break;
       }
     }
+
     if (isTopInt) {
       total.push(arr[i]);
     }
   }
+
   console.log(total.join(" "));
 }
 maxNumber([1, 4, 3, 2]);

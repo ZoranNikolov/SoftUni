@@ -1,6 +1,7 @@
 function rotation(arr, n) {
   while (n > 0) {
-    arr.push(arr.shift());
+    let elementToMove = arr.shift();
+    arr.push(elementToMove);
     n--;
   }
   console.log(arr.join(" "));
