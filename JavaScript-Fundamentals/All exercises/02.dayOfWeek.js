@@ -9,12 +9,17 @@ function dayOfTheWeek(num) {
     "Sunday",
   ];
   let day = "";
-  if (num >= 1 && num <= 7) {
-    day = days[num - 1];
-  } else {
-    day = "Invalid day!";
-  }
+  
+  num >= 1 && num <= 7 ? (day = days[num - 1]) : (day = "Invalid day!");
+
   console.log(day);
+
+  // if (num >= 1 && num <= 7) {
+  //   day = days[num - 1];
+  // } else {
+  //   day = "Invalid day!";
+  // }
+  // console.log(day);
 }
 dayOfTheWeek(3);
 dayOfTheWeek(11);

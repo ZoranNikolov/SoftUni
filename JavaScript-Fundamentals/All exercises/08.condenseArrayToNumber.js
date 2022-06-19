@@ -1,11 +1,18 @@
 function condense(array) {
-  while (array.length > 1) {
-    let condensedArr = [];
-    for (let i = 0; i < array.length - 1; i++) {
-      condensedArr.push(array[i] + array[i + 1]);
-    }
-    array = condensedArr;
+  let arr = [];
+
+  for (let n of array) {
+    arr.push(n);
   }
-  console.log(array[0]);
+
+  while (arr.length > 1) {
+    let condensedArr = [];
+    for (let i = 0; i < arr.length - 1; i++) {
+      condensedArr.push(arr[i] + arr[i + 1]);
+    }
+    arr = condensedArr;
+  }
+
+  console.log(arr.join());
 }
 condense([5, 0, 4, 1, 2]);
