@@ -7,5 +7,5 @@ function loadingBar(num) {
     : console.log(`${num}% [${complete}${incomplete}]\nStill loading...`);
 }
 loadingBar(30);
-loadingBar(50);
-loadingBar(100);
+// loadingBar(50);
+// loadingBar(100);
