@@ -1,26 +1,26 @@
-// class Dog {
-//   constructor(name, color, gender) {
-//     this.name = name;
-//     this.color = color;
-//     this.gender = gender;
-//   }
-//   speak() {
-//     console.log(`${this.name} says Woof!`);
-//   }
-// }
-// let sparky = new Dog("Sparky", "black", "male");
-// let krida = new Dog("Krida", "mixed", "female");
-// console.log(sparky);
-// console.log(krida);
+function movies(array) {
+  let movies = [];
 
-function objectsDemo() {
-  let person = {
-    name: "Ivo",
-    age: 28,
-    isHungy: false,
+  let movie = {
+    name: "",
+    director: "",
+    date: "",
   };
-  delete person.age;
-  console.log(person);
-  let arr = [1, 2, 3];
+
+  map((el) => {
+    if(el.includes('addMovie')){
+      
+    }
+  })
+
 }
-objectsDemo();
+movies([
+  "addMovie Fast and Furious",
+  "addMovie Godfather",
+  "Inception directedBy Christopher Nolan",
+  "Godfather directedBy Francis Ford Coppola",
+  "Godfather onDate 29.07.2018",
+  "Fast and Furious onDate 30.07.2018",
+  "Batman onDate 01.08.2018",
+  "Fast and Furious directedBy Rob Cohen",
+]);
