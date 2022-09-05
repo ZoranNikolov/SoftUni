@@ -1,26 +1,11 @@
-function movies(array) {
-  let movies = [];
-
-  let movie = {
-    name: "",
-    director: "",
-    date: "",
-  };
-
-  map((el) => {
-    if(el.includes('addMovie')){
-      
-    }
-  })
-
+class Vehicle {
+  constructor(){
+    
+  }
 }
-movies([
-  "addMovie Fast and Furious",
-  "addMovie Godfather",
-  "Inception directedBy Christopher Nolan",
-  "Godfather directedBy Francis Ford Coppola",
-  "Godfather onDate 29.07.2018",
-  "Fast and Furious onDate 30.07.2018",
-  "Batman onDate 01.08.2018",
-  "Fast and Furious directedBy Rob Cohen",
-]);
+
+let parts = { engine: 6, power: 100 };
+let vehicle = new Vehicle('a', 'b', parts, 200);
+vehicle.drive(100);
+console.log(vehicle.fuel);
+console.log(vehicle.parts.quality);
