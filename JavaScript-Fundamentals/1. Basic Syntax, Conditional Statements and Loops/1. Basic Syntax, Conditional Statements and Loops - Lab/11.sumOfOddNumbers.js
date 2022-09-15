@@ -1,18 +1,16 @@
-function sumOfOddNumbers(n) {
+function solve(num) {
   let sum = 0;
-  let counter = 0;
+  let index = num;
+  let n = 1;
 
-  for (let i = 1; i <= Number.MAX_SAFE_INTEGER; i++) {
-    if (i % 2 != 0) {
-      sum += i;
-      console.log(i);
-      counter++;
+  while (index > 0) {
+    if (n % 2 !== 0) {
+      sum += n;
+      index--;
+      console.log(n);
     }
-    if (counter == n) {
-      break;
-    }
+    n++;
   }
   console.log(`Sum: ${sum}`);
 }
-sumOfOddNumbers(5);
-sumOfOddNumbers(3);
+solve(5);
