@@ -1,21 +1,23 @@
-function flightSchedule(arr) {
-  let flights = arr[0];
-  let changedStatuses = arr[1];
-  let statusToCheck = arr[2];
-
-  let flightChanged = [];
-  let flightObj = {};
-
-  for (const status of changedStatuses) {
-    flightChanged.push(status.split(" ")[0]);
-  }
-
-  flights.map((el) => {
-    let flightID = el.splice(0, el.indexOf(' '))
-    if (flightChanged.includes(flightID)) {
-      console.log(flightID, city);
+function flightSchedule(input) {
+  let flights = {};
+  input[0].forEach((line) => {
+    let [numberFly, destination] = line.split(" ");
+    flights[numberFly] = {
+      Destination: destination,
+      Status: "Ready to fly",
+    };
+  });
+  input[1].forEach((line) => {
+    let [numberFly, status] = line.split(" ");
+    if (flights.hasOwnProperty(numberFly)) {
+      flights[numberFly].Status = status;
     }
   });
+  for (let fly in flights) {
+    if (flights[fly].Status === String(input[2])) {
+      console.log(flights[fly]);
+    }
+  }
 }
 flightSchedule([
   [
@@ -34,7 +36,8 @@ flightSchedule([
     "DL2120 Cancelled",
     "WN612 Cancelled",
     "WN1173 Cancelled",
-    "SK430 Cancelled", 'WN498 Cancelled'
+    "SK430 Cancelled",
+    "WN498 Cancelled",
   ],
   ["Cancelled"],
 ]);
