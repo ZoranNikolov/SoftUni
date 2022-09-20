@@ -1,19 +1,10 @@
-class Vehicle {
-  constructor(type, model, parts, fuel) {
-    this.type = type;
-    this.model = model;
-    this.parts = parts;
-    this.fuel = fuel;
-    this.parts.quality = this.parts.engine * this.parts.power;
-  }
+function storeProvision(currentStocks, forDelivery) {
+  let obj = {};
+  let summaryStocks = [];
 
-  drive(lostFuel) {
-    return (this.fuel -= lostFuel);
-  }
+  
 }
-
-let parts = { engine: 6, power: 100 };
-let vehicle = new Vehicle("a", "b", parts, 200);
-vehicle.drive(100);
-console.log(vehicle.fuel);
-console.log(vehicle.parts.quality);
+storeProvision(
+  ["Chips", "5", "CocaCola", "9", "Bananas", "14", "Pasta", "4", "Beer", "2"],
+  ["Flour", "44", "Oil", "12", "Pasta", "7", "Tomatoes", "70", "Bananas", "30"]
+);
