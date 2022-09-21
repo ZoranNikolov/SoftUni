@@ -1,10 +1,11 @@
-function storeProvision(currentStocks, forDelivery) {
-  let obj = {};
-  let summaryStocks = [];
-
-  
-}
-storeProvision(
-  ["Chips", "5", "CocaCola", "9", "Bananas", "14", "Pasta", "4", "Beer", "2"],
-  ["Flour", "44", "Oil", "12", "Pasta", "7", "Tomatoes", "70", "Bananas", "30"]
-);
+function movies() {}
+movies([
+  "addMovie Fast and Furious",
+  "addMovie Godfather",
+  "Inception directedBy Christopher Nolan",
+  "Godfather directedBy Francis Ford Coppola",
+  "Godfather onDate 29.07.2018",
+  "Fast and Furious onDate 30.07.2018",
+  "Batman onDate 01.08.2018",
+  "Fast and Furious directedBy Rob Cohen",
+]);
