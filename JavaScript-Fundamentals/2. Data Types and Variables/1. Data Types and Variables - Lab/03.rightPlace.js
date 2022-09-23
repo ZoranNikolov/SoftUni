@@ -12,7 +12,7 @@ function rightPlace(str, char, result) {
   if (res === result) {
     console.log("Matched");
   } else {
-    console.log("Not matched");
+    console.log("Not Matched");
   }
   // str = str.replace("_", char);
 

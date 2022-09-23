@@ -15,7 +15,6 @@ function diagonalAttack(matrixString) {
   let positionRightLeft = matrix[0].length - 1;
 
   for (let row = 0; row < matrix.length; row++) {
-
     for (let col = 0; col < matrix[row].length; col++) {
       let currentNum = matrix[row][col];
       let currentPosition = col;
@@ -31,26 +30,20 @@ function diagonalAttack(matrixString) {
 
     positionLeftRight++;
     positionRightLeft--;
-    
   }
 
   if (diagonalLeftRight === diagonalRightLeft) {
-
     positionLeftRight = 0;
     positionRightLeft = matrix[0].length - 1;
 
     for (let row = 0; row < matrix.length; row++) {
-
       for (let col = 0; col < matrix[row].length; col++) {
-
         let currentPosition = col;
 
         if (
           currentPosition !== positionLeftRight &&
           currentPosition !== positionRightLeft
-        ) 
-        
-        {
+        ) {
           matrix[row][col] = diagonalLeftRight;
         }
       }

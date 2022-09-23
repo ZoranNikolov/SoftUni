@@ -1,24 +1,26 @@
 function storeProvision(currentStocks, forDelivery) {
-  let storeProducts = {};
-  let currentL = currentStocks.length;
-  let forDeliveryL = forDelivery.length;
+  let store = {};
 
-  for (let index = 0; index < currentL; index += 2) {
-    let product = currentStocks[index];
-    storeProducts[product] = Number(currentStocks[index + 1]);
+  for (let i = 0; i < currentStocks.length; i += 2) {
+    let product = currentStocks[i];
+    let quantity = Number(currentStocks[i + 1]);
+    store[product] = quantity;
   }
 
-  for (let index = 0; index < forDeliveryL; index += 2) {
-    let product = forDelivery[index];
-    if (!storeProducts.hasOwnProperty(product)) {
-      storeProducts[product] = 0;
+  for (let i = 0; i < forDelivery.length; i += 2) {
+    let product = forDelivery[i];
+    let quantity = Number(forDelivery[i + 1]);
+    if (store.hasOwnProperty(product)) {
+      store[product] += quantity;
+    } else {
+      store[product] = quantity;
     }
-    storeProducts[product] += Number(forDelivery[index + 1]);
   }
 
-  for (const product in storeProducts) {
-    console.log(`${product} -> ${storeProducts[product]}`);
+  for (const key in store) {
+    console.log(`${key} -> ${store[key]}`);
   }
+  
 }
 storeProvision(
   ["Chips", "5", "CocaCola", "9", "Bananas", "14", "Pasta", "4", "Beer", "2"],

@@ -1,29 +1,19 @@
-function inventory(arr) {
+function inventory(array) {
   let heroes = [];
 
-  for (let heroInfo of arr) {
-    let [name, level, items] = heroInfo.split(" / ");
-
-    // let splittedItems = items.split(", ");
-
-    let currentHero = {
-      name: name,
-      level: Number(level),
-      items: items,
-    };
-    heroes.push(currentHero);
-  }
-
-  let sortedByLevel = heroes.sort((a, b) => {
-    return a.level - b.level;
+  array.forEach((el) => {
+    let [name, level, items] = el.split(" / ");
+    let obj = { name: name, level: Number(level), items: items };
+    heroes.push(obj);
   });
 
+  let sorted = heroes.sort((a, b) => a.level - b.level);
 
-  for (let hero of sortedByLevel) {
-    console.log(`Hero: ${hero.name}`);
-    console.log(`level => ${hero.level}`);
-    console.log(`items => ${hero.items}`);
-  }
+  sorted.forEach((hero) => {
+    console.log(
+      `Hero: ${hero.name}\nlevel => ${hero.level}\nitems => ${hero.items}`
+    );
+  });
 }
 inventory([
   "Isacc / 25 / Apple, GravityGun",
