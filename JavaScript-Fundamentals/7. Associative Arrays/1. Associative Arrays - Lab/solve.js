@@ -1,14 +1,22 @@
-function solve(data) {
-  let key = "four";
-  let myObj = {
-    one: 1,
-    two: 2,
-    three: 3,
-    [key]: 4,
-  };
+function phoneBook(array) {
+  let phoneBook = new Map();
 
-  for (const key in myObj) {
-    console.log(myObj[key]);
+  array.forEach((el) => {
+    let [name, phoneNumber] = el.split(" ");
+    //   phoneBook[name] = phoneNumber;
+    phoneBook.set(name, phoneNumber);
+  });
+
+  for (let key of phoneBook.keys()) {
+    console.log(key, "->", phoneBook.get(key));
   }
+  //   for (const info in phoneBook) {
+  //     console.log(`${info} -> ${phoneBook[info]}`);
+  //   }
 }
-solve();
+phoneBook([
+  "Tim 0834212554",
+  "Peter 0877547887",
+  "Bill 0896543112",
+  "Tim 0876566344",
+]);

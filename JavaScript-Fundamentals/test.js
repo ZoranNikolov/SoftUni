@@ -1,22 +1,33 @@
-function worldSwimmingRecord(input) {
-  let worldRecord = Number(input[0]);
-  let distance = Number(input[1]);
-  let timeInSec = Number(input[2]);
+function solve(value) {
+  let i = 2;
+  let high = Number(value[1]);
+  let width = Number(value[0]);
+  let cake_pleases = high * width;
+  let stop_is = false;
+  do {
+    switch (value[i]) {
+      case "STOP":
+        stop_is = true;
+        break;
+      case value[i]:
+        let p = Number(value[i]);
+        cake_pleases -= p;
+        break;
+    }
+    if (stop_is) {
+      break;
+    }
 
-  let totalTime = distance * timeInSec;
-  let addTime = Math.floor(distance / 15) * 12.5;
+    i++;
+  } while (i <= value.length - 1);
 
-  let sumTime = totalTime + addTime;
-
-  if (worldRecord <= sumTime) {
-    slowTime = Math.abs(worldRecord - sumTime);
-    console.log(`No, he failed! He was ${slowTime.toFixed(2)} seconds slower.`);
-  } else {
+  if (stop_is) {
+    console.log(`${cake_pleases} pieces are left.`);
+  } else if (cake_pleases < 0) {
     console.log(
-      `Yes, he succeeded! The new world record is ${sumTime.toFixed(
-        2
-      )} seconds.`
+      `No more cake left! You need ${Math.abs(cake_pleases)} pieces more.`
     );
   }
 }
-worldSwimmingRecord(["55555.67", "3017", "5.03"]);
+solve(["10", "10", "20", "20", "20", "20", "21"]);
+solve(["10", "2", "2", "4", "6", "STOP"]);
