@@ -20,6 +20,7 @@ function wordOccurrences(arr) {
   for (let [word, count] of sortedEntries) {
     console.log(`${word} -> ${count} times`);
   }
+  
 }
 wordOccurrences([
   "Here",
