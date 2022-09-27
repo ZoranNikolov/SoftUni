@@ -1,30 +1,22 @@
-function catalogue(arr) {
-  let newArr = [];
-  let char;
-  let isUnique = true;
+function phoneBook(array) {
+  let phoneBook = new Map();
 
-  arr.forEach((el) => {
-    newArr.push(el.replace(" :", ":"));
+  array.forEach((el) => {
+    let [name, phoneNumber] = el.split(" ");
+    //   phoneBook[name] = phoneNumber;
+    phoneBook.set(name, phoneNumber);
   });
 
-  newArr.sort((a, b) => a.localeCompare(b));
-
-  for (const el of newArr) {
-    char === el[0] ? (isUnique = false) : (isUnique = true);
-    if (isUnique) {
-      char = el[0];
-      console.log(el[0]);
-    }
-    console.log(`  ${el}`);
+  for (let key of phoneBook.keys()) {
+    console.log(key, "->", phoneBook.get(key));
   }
+  //   for (const info in phoneBook) {
+  //     console.log(`${info} -> ${phoneBook[info]}`);
+  //   }
 }
-catalogue([
-  "Appricot : 20.4",
-  "Fridge : 1500",
-  "TV : 1499",
-  "Deodorant : 10",
-  "Boiler : 300",
-  "Apple : 1.25",
-  "Anti-Bug Spray : 15",
-  "T-Shirt : 10",
+phoneBook([
+  "Tim 0834212554",
+  "Peter 0877547887",
+  "Bill 0896543112",
+  "Tim 0876566344",
 ]);
