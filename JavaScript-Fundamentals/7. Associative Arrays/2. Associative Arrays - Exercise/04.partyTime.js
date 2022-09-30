@@ -8,6 +8,7 @@ function partyTime(array) {
 
         if (line === 'PARTY') {
             isParty = true;
+            continue
         }
 
         let firstChar = line[0]
@@ -27,7 +28,9 @@ function partyTime(array) {
 
     let size = normal.length + vip.length
 
-    console.log(vip);
+    console.log(size);
+    vip.forEach((el) => console.log(el));
+    normal.forEach((el) => console.log(el));
 
 }
 partyTime(['7IK9Yo0h',
