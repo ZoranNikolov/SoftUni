@@ -1,14 +1,6 @@
 function travelTime(array) {
 
-    let destinations = {}
 
-    for (let line of array) {
-        let [countryName, town, price] = line.split(' > ')
-
-        destinations.country = countryName
-        console.log(destinations);
-
-    }
 
 }
 travelTime([
