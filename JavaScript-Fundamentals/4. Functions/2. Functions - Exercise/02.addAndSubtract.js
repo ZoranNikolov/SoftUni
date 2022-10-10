@@ -3,7 +3,7 @@ function main(first, second, third) {
   let finalResult = subtract(sumFirstAndSecond, third);
   console.log(finalResult);
 
-  function sum(first, second) {
+  function sum(a, b) {
     return first + second;
   }
 
