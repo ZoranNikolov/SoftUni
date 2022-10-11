@@ -1,15 +1,11 @@
 function arenaTier(gladiatorsList) {
-
     let gladiatorPool = {};
-
     for (const info of gladiatorsList) {
         if (info === 'Ave Cesar') {
             break;
         } else if (!info.split(' ').includes('vs')) {
-
             addGladiator(info)
         } else {
-
             getDuelResult(info)
         }
         function addGladiator(gladiator) {
@@ -58,19 +54,20 @@ function arenaTier(gladiatorsList) {
         }
     }
     let sorted = Object.entries(gladiatorPool).sort((a, b) => b[1].totalSkill - a[1].totalSkill || a[0].localeCompare(b[0]))
-    
-    for (const [name, skills] of sorted) {
-        let totalSkill = Object.entries(skills)[0][1]
-        delete skills.totalSkill
-        let sortedSkills = Object.entries(skills).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-        console.log(`${name}: ${totalSkill} skill`)
+    getOrderedTier(sorted)
+    function getOrderedTier(gladiators) {
+        for (const [name, skills] of sorted) {
+            let totalSkill = Object.entries(skills)[0][1]
+            delete skills.totalSkill
+            let sortedSkills = Object.entries(skills).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+            console.log(`${name}: ${totalSkill} skill`)
 
-        for (const [technique, skill] of sortedSkills) {
-            console.log(`- ${technique} <!> ${skill}`);
+            for (const [technique, skill] of sortedSkills) {
+                console.log(`- ${technique} <!> ${skill}`);
+            }
         }
     }
 }
-
 arenaTier([
     'Peter -> BattleCry -> 400',
     'Alex -> PowerPunch -> 300',
