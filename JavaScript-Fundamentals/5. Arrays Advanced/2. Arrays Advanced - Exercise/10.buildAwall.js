@@ -1,40 +1,40 @@
 function buildAwall(array) {
-  let crews = array.slice().map(Number);
-  let concreteCostRate = 195;
-  let neededHeight = 30;
-  let totalCost = 0;
-  let totalDailyCostArr = [];
-  let isBuilt = false;
+	let crews = array.slice().map(Number);
+	let concreteCostRate = 195;
+	let neededHeight = 30;
+	let totalCost = 0;
+	let totalDailyCostArr = [];
+	let isBuilt = false;
 
-  while (true) {
-    let dailyCounter = 0;
+	while (true) {
+		let dailyCounter = 0;
 
-    for (let i = 0; i < crews.length; i++) {
-      if (crews[i] === neededHeight) {
-        let index = crews.indexOf(crews[i]);
-        crews.splice(index, 1);
+		for (let i = 0; i < crews.length; i++) {
+			if (crews[i] === neededHeight) {
+				let index = crews.indexOf(crews[i]);
+				crews.splice(index, 1);
 
-        if (crews.length === 0) {
-          isBuilt = true;
-          break;
-        }
+				if (crews.length === 0) {
+					isBuilt = true;
+					break;
+				}
 
-        i--;
-      } else {
-        crews[i]++;
-        dailyCounter++;
-      }
-    }
+				i--;
+			} else {
+				crews[i]++;
+				dailyCounter++;
+			}
+		}
 
-    if (isBuilt) {
-      break;
-    }
+		if (isBuilt) {
+			break;
+		}
 
-    totalDailyCostArr.push(dailyCounter * concreteCostRate);
-    totalCost += dailyCounter * concreteCostRate * 1900;
-  }
-  console.log(totalDailyCostArr.join(", "));
-  console.log(`${totalCost} pesos`);
+		totalDailyCostArr.push(dailyCounter * concreteCostRate);
+		totalCost += dailyCounter * concreteCostRate * 1900;
+	}
+	console.log(totalDailyCostArr.join(", "));
+	console.log(`${totalCost} pesos`);
 }
 buildAwall(["21", "25", "28"]);
 buildAwall([17]);
