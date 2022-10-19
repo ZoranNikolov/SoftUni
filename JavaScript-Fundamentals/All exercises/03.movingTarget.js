@@ -10,7 +10,7 @@ function movingTarget(input) {
 
 			switch (command) {
 				case "Shoot":
-					if (index >= 0 && index < targets.length) {
+					if (targets[index]) {
 						let power = Number(token);
 						targets[index] -= power;
 						if (targets[index] <= 0) {
@@ -19,7 +19,7 @@ function movingTarget(input) {
 					}
 					break;
 				case "Add":
-					if (index >= 0 && index < targets.length) {
+					if (targets[index]) {
 						let value = Number(token);
 						targets.splice(index, 0, value);
 					} else {
@@ -30,7 +30,7 @@ function movingTarget(input) {
 					let radius = Number(token);
 					let indexesBefore = index - radius;
 					let indexesAfter = index + radius;
-					if (indexesBefore >= 0 && indexesAfter < targets.length) {
+					if (targets[indexesBefore] && targets[indexesAfter]) {
 						let indexesToRemove = indexesAfter - indexesBefore + 1;
 						targets.splice(indexesBefore, indexesToRemove);
 					} else {
