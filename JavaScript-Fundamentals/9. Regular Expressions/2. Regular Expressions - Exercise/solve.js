@@ -1,29 +1,24 @@
 function solve(input) {
-	let pattern = /[>]{2}(?<furniture>[A-z]+)[<]{2}(?<price>[\d.]+)!(?<quantity>[\d]+)\b/g;
-	let text = input.join(", ");
-	let res = [];
-	let totalSum = 0;
-	let match = pattern.exec(text);
+	let pattern =
+		/%(?<name>[A-Z][a-z]+)%[^|$%.]*<(?<product>\w+)>[^|$%.]*\|(?<count>\d+)\|[^|$%.]*?(?<price>\d+\.?\d+)?\$/g;
+	let total = 0;
+	let text = input.join("-");
+	let current = pattern.exec(text);
 
-	while (match !== null) {
-		res.push(match.groups.furniture);
-		let quantity = Number(match.groups.quantity);
-		let price = Number(match.groups.price);
-
-		totalSum += quantity * price;
-
-		text = match = pattern.exec(text);
+	while (current) {
+		let currentPrice = current.groups.count * current.groups.price;
+		console.log(
+			`${current.groups.name}: ${current.groups.product} - ${currentPrice.toFixed(2)}`
+		);
+		total += currentPrice;
+		current = pattern.exec(text);
 	}
-	console.log(res);
-	console.log(totalSum);
+	console.log(`Total income: ${total.toFixed(2)}`);
 }
 solve([
-	">>Laptop<<312.2323!3",
-	">>TV<<300.21314!5",
-	">Invalid<<!5",
-	">>TV<<300.21314!20",
-	">>Invalid<!5",
-	">>TV<<30.21314!5",
-	">>Invalid<<!!5",
-	"Purchase",
+	"%InvalidName%<Croissant>|2|10.3$",
+	"%Peter%<Gum>1.3$",
+	"%Maria%<Cola>|1|2.4",
+	"%Valid%<Valid>valid|10|valid20$",
+	"end of shift",
 ]);
