@@ -40,10 +40,17 @@ function worldTour(input) {
 	}
 	console.log(`Ready for world tour! Planned stops: ${initialString}`);
 }
+// worldTour([
+// 	"Hawai::Cyprys-Greece",
+// 	"Add Stop:7:Rome",
+// 	"Remove Stop:11:16",
+// 	"Switch:Hawai:Bulgaria",
+// 	"Travel",
+// ]);
 worldTour([
-	"Hawai::Cyprys-Greece",
-	"Add Stop:7:Rome",
-	"Remove Stop:11:16",
-	"Switch:Hawai:Bulgaria",
+	"Albania:Bulgaria:Cyprus:Deuchland",
+	"Add Stop:3:Nigeria",
+	"Remove Stop:4:8",
+	"Switch:Albania: Azərbaycan",
 	"Travel",
 ]);
