@@ -1,4 +1,4 @@
-# My SoftUni education.
+# My SoftUni education
 
 Hello,
 
