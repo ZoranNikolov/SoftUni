@@ -6,5 +6,4 @@ This repository includes my solutions to the tasks throughout my education at So
 
 I hope you will find the information here useful.
 
-Best regards,	
-Zoran
+Best regards,<br />Zoran
