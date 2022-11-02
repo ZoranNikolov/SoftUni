@@ -18,8 +18,10 @@ function emojiDetector(input) {
 			coolEmojis.push(emoji);
 		}
 	});
+
 	console.log(`Cool threshold: ${threshold}`);
 	console.log(`${emojiArr.length} emojis found in the text. The cool ones are:`);
+
 	if (coolEmojis.length > 0) {
 		coolEmojis.forEach((emoji) => console.log(emoji));
 	}
