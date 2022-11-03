@@ -3,7 +3,7 @@ function sortAnArrayBy2Criteria(arr) {
 		return a.length - b.length || a.localeCompare(b);
 	});
 
-	sortedArray.forEach(element => console.log(element));
+	sortedArray.forEach((element) => console.log(element));
 }
 sortAnArrayBy2Criteria(["alpha", "beta", "gamma"]);
 // sortAnArrayBy2Criteria(['Isacc', 'Theodor', 'Jack', 'Harrison', 'George']);
