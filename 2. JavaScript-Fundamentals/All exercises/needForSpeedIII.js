@@ -27,10 +27,14 @@ function needForSpeed(input) {
 				if (sum > 75) {
 					result.get(givenCar)[1] = 75;
 					sum -= 75;
-					console.log(`${givenCar} refueled with ${givenFuel - sum} liters`);
+					console.log(
+						`${givenCar} refueled with ${givenFuel - sum} liters`
+					);
 				} else {
 					result.get(givenCar)[1] = sum;
-					console.log(`${givenCar} refueled with ${givenFuel} liters`);
+					console.log(
+						`${givenCar} refueled with ${givenFuel} liters`
+					);
 				}
 			} else if (element.includes("Revert")) {
 				let givenCar = tokens[1];
@@ -41,7 +45,9 @@ function needForSpeed(input) {
 				if (result.get(givenCar)[0] < 10000) {
 					result.get(givenCar)[0] = 10000;
 				} else {
-					console.log(`${givenCar} mileage decreased by ${kilometers} kilometers`);
+					console.log(
+						`${givenCar} mileage decreased by ${kilometers} kilometers`
+					);
 				}
 			} else if (element.includes("Drive")) {
 				let givenCar = tokens[1];
@@ -66,7 +72,9 @@ function needForSpeed(input) {
 		}
 	}
 	for (const [car, carInfo] of result) {
-		console.log(`${car} -> Mileage: ${carInfo[0]} kms, Fuel in the tank: ${carInfo[1]} lt.`);
+		console.log(
+			`${car} -> Mileage: ${carInfo[0]} kms, Fuel in the tank: ${carInfo[1]} lt.`
+		);
 	}
 }
 needForSpeed([
