@@ -1,31 +1,36 @@
-function launchBreak(input) {
-	let Movietitle = input[0];
-	let epizodeDuration = Number(input[1]);
-	let brekDuration = Number(input[2]);
+function foodForPet(input) {
+	let index = 0;
+	let days = Number(input[index]);
+	index++;
+	let allFood = Number(input[index]);
+	index++;
 
-	let launchtime = (1 / 8) * brekDuration;
-	let Leisuretime = (1 / 4) * brekDuration;
+	let biscuits = 0;
+	let sum = 0;
 
-	let busytime = launchtime + Leisuretime;
-	let timeleft = brekDuration - busytime;
+	let allDog = 0;
+	let allCat = 0;
 
-	if (timeleft >= epizodeDuration) {
-		let TimeAfterMovie = timeleft - epizodeDuration;
+	for (let day = 1; day <= days; day++) {
+		let dogFood = Number(input[index]);
+		index++;
+		allDog += dogFood;
+		let catFood = Number(input[index]);
+		index++;
+		allCat += catFood;
 
-		console.log(
-			`You have enough time to watch ${Movietitle} and left with ${Math.ceil(
-				TimeAfterMovie
-			)} minutes free time.`
-		);
-	} else {
-		let timeNeedet = epizodeDuration - timeleft;
-		console.log(
-			`You don't have enough time to watch ${Movietitle}, you need ${Math.ceil(
-				timeNeedet
-			)} more minutes.`
-		);
+		sum += dogFood + catFood;
+
+		if (day % 3 === 0) {
+			biscuits += (10 / 100) * (dogFood + catFood);
+		}
 	}
-}
 
-launchBreak(["Game of Thrones", "60", "96"]);
-launchBreak(["Teen Wolf", "48", "60"]);
+	console.log(`Total eaten biscuits: ${biscuits.toFixed()}gr.`);
+	console.log(
+		`${((sum / allFood) * 100).toFixed(2)}% of the food has been eaten.`
+	);
+	console.log(`${((allDog / sum) * 100).toFixed(2)}% eaten from the dog.`);
+	console.log(`${((allCat / sum) * 100).toFixed(2)}% eaten from the cat.`);
+}
+foodForPet([3, 1000, 300, 20, 100, 30, 110, 40]);
