@@ -1,14 +1,9 @@
 function addRemove(array) {
 	let res = [];
 	let iterator = 1;
-	for (const el of array) {
-		if (el === "add") {
-			res.push(iterator);
-		} else {
-			res.pop();
-		}
-		iterator++;
-	}
+	array.forEach((command) => {
+		command === "add" ? res.push(iterator++) : res.pop();
+	});
 	res.length > 0
 		? res.forEach((el) => console.log(el))
 		: console.log("Empty");
