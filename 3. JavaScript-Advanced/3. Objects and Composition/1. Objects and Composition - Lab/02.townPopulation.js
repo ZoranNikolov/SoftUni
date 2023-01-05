@@ -1,4 +1,5 @@
 function townPopulation(townData) {
+	
 	let townInfoObj = townData
 		.map((line) => {
 			let data = line.split(" <-> ");
