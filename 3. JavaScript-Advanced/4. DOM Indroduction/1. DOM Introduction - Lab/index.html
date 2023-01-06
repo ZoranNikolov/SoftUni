@@ -2,9 +2,24 @@
 	<head>
 		<title>My web pade</title>
 		<body>
-			<div>
-				Hello world! 
-			</div>
+			<div>Hello world!</div>
+			<h1>
+				<div>First div</div>
+			</h1>
+			<h1>
+				<div>Second div</div>
+			</h1>
+			<script>
+				let header = document.getElementsByTagName("h1");
+
+				for (const element of header) {
+					let children = element.childNodes;
+
+					for (const child of children) {
+						child.innerText = "Changed!";
+					}
+				}
+			</script>
 		</body>
 	</head>
 </html>
