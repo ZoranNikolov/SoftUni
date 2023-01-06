@@ -3,6 +3,13 @@ function jansNotation(arr) {
 	let numbers = [];
 	let operators = [];
 
+	let operationEnum = {
+		"+": (a, b) => a + b,
+		"-": (a, b) => a - b,
+		"*": (a, b) => a * b,
+		"/": (a, b) => a / b,
+	};
+
 	for (const el of arr) {
 		if (typeof el == "number") {
 			numbers.push(el);
@@ -25,6 +32,10 @@ function jansNotation(arr) {
 			continue;
 		}
 		let numA = res.pop();
+		let numB = res.pop();
+		let result = operationEnum[el](numB, numA);
+		res.push(result);
 	}
+	console.log(res.join(""));
 }
 jansNotation([5, 3, 4, "*", "-"]);
