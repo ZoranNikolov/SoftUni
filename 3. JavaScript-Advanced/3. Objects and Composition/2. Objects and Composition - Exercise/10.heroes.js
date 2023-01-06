@@ -11,7 +11,6 @@ function solve() {
 			state.stamina--;
 		},
 	});
-
 	const fighter = (name) => {
 		let state = {
 			name,
