@@ -1,3 +1,11 @@
-let age = 100
+function solve(ref, match, replacer) {
+	let text = ref.textContent;
 
-console.log(100);
+	text = text.replaceAll(match, replacer);
+
+	ref.textContent = text;
+}
+
+let element = document.getElementById("change-me");
+
+solve(element, "changed", "new");
