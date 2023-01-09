@@ -1,3 +1,7 @@
-let element = document.getElementsByClassName("important-info");
+let elements = document.getElementsByClassName("important-info");
 
-console.log(element);
+for (const element of elements) {
+	if (element.tagName === "H1") {
+		element.style.color = "yellow";
+	}
+}
