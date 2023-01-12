@@ -1,7 +1,18 @@
-let elements = document.getElementsByClassName("important-info");
+function solve(elementId) {
+	let elementText = document.getElementById(elementId).textContent;
 
-for (const element of elements) {
-	if (element.tagName === "H1") {
-		element.style.color = "yellow";
+	let pattern = /\(([^)]+)\)/g;
+
+	let result = elementText.matchAll(pattern);
+
+	let matches = [];
+
+	for (const text of result) {
+		matches.push(text[1]);
 	}
+	
+	return matches.join('; ')
+
 }
+let result = solve("content");
+console.log(result);
