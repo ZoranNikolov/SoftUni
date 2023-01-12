@@ -1,3 +1,3 @@
-function subtract() {
+function toggle() {
     console.log('TODO:...');
 }
