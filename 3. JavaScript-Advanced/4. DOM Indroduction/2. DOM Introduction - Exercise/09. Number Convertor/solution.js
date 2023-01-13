@@ -1,4 +1,9 @@
 function solve() {
+	document
+		.querySelector("#container button")
+		.addEventListener("click", convert);
 
-    //TODO...
+	function convert() {
+		alert("Work!");
+	}
 }
