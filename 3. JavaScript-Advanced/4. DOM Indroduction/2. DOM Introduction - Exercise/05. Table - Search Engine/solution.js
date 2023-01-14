@@ -2,28 +2,25 @@ function solve() {
 	document.querySelector("#searchBtn").addEventListener("click", onClick);
 
 	function onClick() {
-		let input = document.getElementById("searchField").value;
-		let table = document.getElementsByTagName("tr");
-
-		let isMatched = false;
+		const input = document.getElementById("searchField").value;
+		const table = document.getElementsByTagName("tr");
+		const prevSearch = document.getElementsByClassName("select");
+		
+		if (prevSearch[0]) {
+			prevSearch[0].classList.remove("select");
+		}
 
 		for (let i = 2; i < table.length; i++) {
 			let row = table[i];
-			let tempArr = [];
 
 			Array.from(row.children).forEach((cell) => {
 				if (
 					cell.textContent.toLowerCase().includes(input.toLowerCase())
 				) {
-					console.log("Hurray!");
-					isMatched = true;
+					table[i].classList.add("select");
 				}
 			});
-
-			if (isMatched) {
-				break;
-			}
 		}
-		// debugger;
+		document.getElementById("searchField").value = "";
 	}
 }
