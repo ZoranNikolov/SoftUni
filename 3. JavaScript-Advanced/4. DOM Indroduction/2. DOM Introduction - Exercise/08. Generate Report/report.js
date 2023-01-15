@@ -14,19 +14,22 @@ function generateReport() {
 
 			//check is the checkbox is checked
 			if (infoTheader[1].checked === true) {
+				
 				//the key is the name of text content of th checkbox
-				let key = infoTheader[0].textContent.trim().toLocaleLowerCase();
+				let propertyName = infoTheader[0].textContent
+					.trim()
+					.toLowerCase();
 
 				//the value is the text content of the current cell in the column
 				let value = tableData[index].textContent;
 
 				//create an object (key - value pair)
-				tempData[key] = value;
-
-				//store the object
-				res.push(tempData);
+				tempData[propertyName] = value;
 			}
 		}
+		//store the object
+		res.push(tempData);
 	}
-	document.getElementById("output").textContent = JSON.stringify(res);
+	let jsonRes = JSON.stringify(res);
+	document.getElementById("output").textContent = jsonRes;
 }
