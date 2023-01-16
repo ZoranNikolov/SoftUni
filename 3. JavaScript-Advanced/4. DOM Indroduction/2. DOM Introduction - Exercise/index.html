@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Test</title>
+	</head>
+	<body>
+		<table border="1" id="customers">
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+			</tr>
+			<tr>
+				<td>Eve</td>
+				<td>eve@gmail.com</td>
+			</tr>
+			<tr>
+				<td>Nick</td>
+				<td>nick@yahooo.com</td>
+			</tr>
+			<tr>
+				<td>Didi</td>
+				<td>didi@didi.net</td>
+			</tr>
+			<tr>
+				<td>Tedy</td>
+				<td>tedy@tedy.com</td>
+			</tr>
+		</table>
+		Email: <input type="text" name="email" />
+		<button onclick="deleteByEmail()">Delete</button>
+		<div id="result"></div>
+		<script>
+			function deleteByEmail() {
+				let email = document.getElementsByName("email")[0].value.trim();
+				let tableCells = document.querySelectorAll(
+					"#customers td:nth-child(2)"
+				);
+				let found = false;
+				for (const cell of tableCells) {
+					if (cell.textContent === email) {
+						cell.parentElement.remove();
+						found = true;
+					}
+				}
+
+				let result = document.getElementById("result");
+
+				result.textContent = found ? "Deleted." : "Not found.";
+			}
+		</script>
+		<script src="index.js"></script>
+	</body>
+</html>
