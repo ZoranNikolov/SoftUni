@@ -1,7 +1,7 @@
 let button = document.getElementById("clickme");
 
-button.addEventListener("click", onClick);
+button.addEventListener("mousemove", onMouseMove);
 
-function onClick() {
-	console.log("I am clicked!");
+function onMouseMove(event) {
+	console.log('MOUSE');
 }
