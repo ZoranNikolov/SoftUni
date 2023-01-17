@@ -1,10 +1,33 @@
 <html>
 	<head>
 		<title>Test</title>
+		<style>
+			#inner-div {
+				display: inline-block;
+				width: 150px;
+				background-color: cadetblue;
+				text-align: center;
+				padding: 50px 0;
+			}
+			#outer-div {
+				display: inline-block;
+				width: 250px;
+				background-color: rgb(10, 10, 128);
+				text-align: center;
+				padding: 50px 0;
+			}
+		</style>
 	</head>
 	<body>
-		<input type="text" name="my-input" id="first" />
-		<button id="clickme">Click me!</button>
+		<div id="outer-div">
+			<div id="inner-div">
+				<form>
+					<button id="mybtn">First button</button>
+					<button id="mybtn">Second button</button>
+					<button id="mybtn">Third button</button>
+				</form>
+			</div>
+		</div>
 		<script src="index.js"></script>
 	</body>
 </html>

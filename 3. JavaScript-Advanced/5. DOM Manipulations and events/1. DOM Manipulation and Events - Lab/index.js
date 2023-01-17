@@ -1,7 +1,7 @@
-let button = document.getElementById("clickme");
+setTimeout(() => {
+	console.log("I will refresh");
+}, 3000);
 
-button.addEventListener("mousemove", onMouseMove);
-
-function onMouseMove(event) {
-	console.log('MOUSE');
-}
+document.getElementById("mybtn").addEventListener("click", function (event) {
+	event.preventDefault();
+});
