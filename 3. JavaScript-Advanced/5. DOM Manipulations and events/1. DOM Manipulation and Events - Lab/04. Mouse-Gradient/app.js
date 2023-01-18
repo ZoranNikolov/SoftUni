@@ -1,3 +1,3 @@
 function attachGradientEvents() {
-    console.log('TODO:...');
+	console.log("TODO:...");
 }
