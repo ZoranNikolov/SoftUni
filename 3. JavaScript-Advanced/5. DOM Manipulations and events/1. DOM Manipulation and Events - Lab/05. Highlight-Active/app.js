@@ -1,3 +1,6 @@
 function focused() {
-    console.log('TODO:...');
+
+	const button = document.getElementsByTagName('div')[0];
+
+	
 }
