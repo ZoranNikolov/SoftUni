@@ -1,6 +1,16 @@
 function focused() {
+	let inputs = document.getElementsByTagName("input");
 
-	const button = document.getElementsByTagName('div')[0];
+	for (let input of inputs) {
+		input.addEventListener("focus", focusInput);
+		input.addEventListener("blur", blurInput);
+	}
 
-	
+	function focusInput(event) {
+		event.target.parentElement.classList.add("focused");
+	}
+
+	function blurInput(event) {
+		event.target.parentElement.classList.remove("focused");
+	}
 }
