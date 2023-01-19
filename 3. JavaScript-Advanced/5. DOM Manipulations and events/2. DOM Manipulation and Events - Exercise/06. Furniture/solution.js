@@ -5,7 +5,7 @@ function solve() {
 
 	function generate() {
 		let currentItems = JSON.parse(document.querySelectorAll("textarea")[0].value);
-		let tableBody = document.getElementsByTagName('tbody')[0]
+		let tableBody = document.getElementsByTagName("tbody")[0];
 		for (let item of currentItems) {
 			let tableRow = document.createElement("tr");
 			tableRow.innerHTML = `<td>
@@ -39,5 +39,19 @@ function solve() {
 		}
 	}
 
-	function buy() {}
+	function buy() {
+		let table = Array.from(document.querySelectorAll("tbody tr"));
+		let res = [];
+
+		for (let el of table) {
+			if (el.querySelector('input[type="checkbox"]:checked')) {
+				let tableData = Array.from(el.querySelectorAll("td"));
+				let info = {
+					name: tableData[1].children[0].textContent,
+					price: tableData[2].children[0].textContent,
+					decFactor: tableData[3].children[0].textContent,
+				};
+			}
+		}
+	}
 }
