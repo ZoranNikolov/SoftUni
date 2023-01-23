@@ -53,24 +53,28 @@
 // // console.log(sumA(1, 2, null));
 // console.log(result);
 
-function sum(x, y, z) {
-	return x + y + z;
-}
+// function sum(x, y, z) {
+// 	return x + y + z;
+// }
 
-let mySum = sum(1, 2, 3);
+// let mySum = sum(1, 2, 3);
 
-function curriedSum(x) {
-	return function (y) {
-		return function (z) {
-			return sum(x, y, z);
-		};
+// let curriedSum = (x) => (y) => (z) => sum(x, y, z);
+
+// let first = curriedSum(1),
+// 	second = first(2),
+// 	result = second(3);
+
+// let newRres = curriedSum(1)(2)(3);
+
+// console.log(newRres);
+
+const add = (function () {
+	let counter = 0;
+	return function () {
+		counter += 1;
+		return counter;
 	};
-}
+})();
 
-let first = curriedSum(1),
-	second = first(2),
-	result = second(3);
-
-let newRres = curriedSum(1)(2)(3);
-
-console.log(newRres);
+console.log(add());
