@@ -9,6 +9,7 @@
 Example - mewFunc.call(anotherCat) -> mewFunc is called in the context of 'anotherCat'. This refers to 'abotherCat'.
 8. bind() - method creates a new function that, when called, has its this keyword set to the provided value, 
 with a given sequence of arguments preceding any provided when the new function is called.
+9. Predicate - functions that return boolean based on a specific condition.
 
 hoisting - only var and function declaration
 */
