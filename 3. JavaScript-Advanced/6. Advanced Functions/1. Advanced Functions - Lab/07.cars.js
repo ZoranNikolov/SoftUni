@@ -4,7 +4,7 @@ function cars(array) {
 	const instr = {
 		create: (name, inherits, parentName) =>
 			(resObj[name] = inherits ? Object.create(resObj[parentName]) : {}),
-		set: (name, k, v) => (resObj[name][k] = v),
+		set: (name, k, value) => (resObj[name][k] = value),
 		print: (name) => {
 			const entry = [];
 			for (const key in resObj[name]) {
@@ -14,8 +14,8 @@ function cars(array) {
 		},
 	};
 	array.forEach((x) => {
-		const [command, name, k, v] = x.split(" ");
-		instr[command](name, k, v);
+		const [command, name, k, value] = x.split(" ");
+		instr[command](name, k, value);
 	});
 }
 cars([
