@@ -14,7 +14,7 @@ function solution() {
 		turkey: { protein: 10, carbohydrate: 10, fat: 10, flavour: 10 },
 	};
 
-	return function inputHandler(input) {
+	return function manager(input) {
 		let actionHandler = cmdOption();
 		let [cmd, microelement, quantity] = input.split(" ");
 		return actionHandler[cmd](microelement, quantity);
