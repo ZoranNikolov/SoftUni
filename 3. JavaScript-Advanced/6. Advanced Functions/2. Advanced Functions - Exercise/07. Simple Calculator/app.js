@@ -3,15 +3,27 @@ function calculator() {
 	let selector2;
 	let resultSelector;
 
-	return {
-		init: (selector1, selector2, resultSelector) => {
-			selector1 = document.getElementById(selector1)
-			selector2 = document.getElementById(selector2)
+	let action = {
+		init: (firstSelector, secondSelector, resSelector) => {
+			selector1 = document.querySelector(firstSelector);
+			selector2 = document.querySelector(secondSelector);
+			resultSelector = document.querySelector(resSelector);
 		},
-		add: () => {},
-		substract: () => {},
+		add: () => {
+			let firstNum = Number(selector1.value);
+			let secNum = Number(selector2.value);
+			let sum = firstNum + secNum;
+			resultSelector.value = sum;
+		},
+		subtract: () => {
+			let firstNum = Number(selector1.value);
+			let secNum = Number(selector2.value);
+			let sum = firstNum - secNum;
+			resultSelector.value = sum;
+		},
 	};
+	return action;
 }
 
-const calculate = calculator (); 
-calculate.init ('#num1', '#num2', '#result'); 
+const calculate = calculator();
+calculate.init("#num1", "#num2", "#result");
