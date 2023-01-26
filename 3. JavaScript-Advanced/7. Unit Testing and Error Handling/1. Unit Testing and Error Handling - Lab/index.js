@@ -1,4 +1,8 @@
 function sum(array) {
+	if (!Array.isArray(array)) {
+		return NaN;
+	}
+
 	let result = 0;
 
 	for (let number of array) {
@@ -14,7 +18,6 @@ function product(array) {
 	for (let number of array) {
 		result *= Number(number);
 	}
-
 	return result;
 }
 
