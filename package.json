@@ -1,0 +1,23 @@
+{
+  "name": "my-unit-testing",
+  "version": "1.0.0",
+  "description": "Hello,",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZoranNikolov/SoftUni.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZoranNikolov/SoftUni/issues"
+  },
+  "homepage": "https://github.com/ZoranNikolov/SoftUni#readme",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}
