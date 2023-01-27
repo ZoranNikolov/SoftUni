@@ -8,11 +8,11 @@ describe("test isOddOrEven functionally", () => {
 			});
 
 			it("Result should be undefine with empty object argument", () => {
-				assert.equal(isOddOrEven({}, undefined));
+				assert.equal(isOddOrEven({}), undefined);
 			});
 
 			it("Result should be undefine with object argument", () => {
-				assert.equal(isOddOrEven({ name: "Pesho" }));
+				assert.equal(isOddOrEven({ name: "Pesho" }), undefined);
 			});
 
 			it("Result should be undefine with number argument", () => {
