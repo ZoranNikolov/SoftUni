@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ZoranNikolov/SoftUni#readme",
   "dependencies": {
     "chai": "^4.3.7",
+    "is": "^3.3.0",
     "mocha": "^10.2.0"
   }
 }
