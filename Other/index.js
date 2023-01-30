@@ -71,11 +71,11 @@
 
 //Classes
 
-function makeRabbit(type) {
-	let rabbit = Object.create(protoRabbit);
-	rabbit.type = type;
-	return rabbit;
-}
+// function makeRabbit(type) {
+// 	let rabbit = Object.create(protoRabbit);
+// 	rabbit.type = type;
+// 	return rabbit;
+// }
 
 // function Rabbit(type) {
 // 	this.type = type;
@@ -118,5 +118,37 @@ let blackRabbit = new Rabbit("black");
 
 // console.log(Object.prototype.toString.call([1, 2])); // → [object Array]
 
-console.log("toString" in Object.create({})); // → true
-console.log("toString" in Object.create(null)); // → false
+// console.log("toString" in Object.create({})); // → true
+// console.log("toString" in Object.create(null)); // → false
+
+// console.log({ x: 1 }.hasOwnProperty("x")); // → true
+// console.log({ x: 1 }.hasOwnProperty("toString")); // → false
+
+Rabbit.prototype.toString = function () {
+	return `a ${this.type} rabbit`;
+};
+// console.log(String(blackRabbit)); // → a black rabbit
+
+let sym = Symbol("name");
+console.log(sym == Symbol("name")); // → false
+Rabbit.prototype[sym] = 55;
+console.log(blackRabbit[sym]); // → 55
+
+const toStringSymbol = Symbol("toString");
+Array.prototype[toStringSymbol] = function () {
+	return `${this.length} cm of blue yarn`;
+};
+console.log([1, 2].toString()); // → 1,2
+console.log([1, 2][toStringSymbol]()); // → 2 cm of blue yarn
+
+let stringObject = {
+	[toStringSymbol]() {
+		return "a jute rope";
+	},
+};
+console.log(stringObject[toStringSymbol]()); // → a jute rope
+
+let okIterator = "OK"[Symbol.iterator]();
+console.log(okIterator.next()); // → {value: "O", done: false}
+console.log(okIterator.next()); // → {value: "K", done: false}
+console.log(okIterator.next()); // → {value: undefined, done: true}
