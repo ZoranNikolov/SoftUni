@@ -106,9 +106,17 @@ let blackRabbit = new Rabbit("black");
 // })();
 // console.log(object.getWord()); // → hello
 
-Rabbit.prototype.teeth = "small";
-console.log(killerRabbit.teeth); // → small
-killerRabbit.teeth = "long, sharp, and bloody";
-console.log(killerRabbit.teeth); // → long, sharp, and bloody
-console.log(blackRabbit.teeth); // → small
-console.log(Rabbit.prototype.teeth); // → small
+// Rabbit.prototype.teeth = "small";
+// console.log(killerRabbit.teeth); // → small
+// killerRabbit.teeth = "long, sharp, and bloody";
+// console.log(killerRabbit.teeth); // → long, sharp, and bloody
+// console.log(blackRabbit.teeth); // → small
+// console.log(Rabbit.prototype.teeth); // → small
+
+// console.log(Array.prototype.toString == Object.prototype.toString); // → false
+// console.log([1, 2].toString()); // → 1,2
+
+// console.log(Object.prototype.toString.call([1, 2])); // → [object Array]
+
+console.log("toString" in Object.create({})); // → true
+console.log("toString" in Object.create(null)); // → false
