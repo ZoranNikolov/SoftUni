@@ -88,16 +88,16 @@
 // console.log(Object.getPrototypeOf(Rabbit) == Function.prototype); // → true
 // console.log(Object.getPrototypeOf(weirdRabbit) == Rabbit.prototype); // → true
 
-class Rabbit {
-	constructor(type) {
-		this.type = type;
-	}
-	speak(line) {
-		console.log(`The ${this.type} rabbit says '${line}'`);
-	}
-}
-let killerRabbit = new Rabbit("killer");
-let blackRabbit = new Rabbit("black");
+// class Rabbit {
+// 	constructor(type) {
+// 		this.type = type;
+// 	}
+// 	speak(line) {
+// 		console.log(`The ${this.type} rabbit says '${line}'`);
+// 	}
+// }
+// let killerRabbit = new Rabbit("killer");
+// let blackRabbit = new Rabbit("black");
 
 // let object = new (class {
 // 	getWord() {
@@ -124,71 +124,112 @@ let blackRabbit = new Rabbit("black");
 // console.log({ x: 1 }.hasOwnProperty("x")); // → true
 // console.log({ x: 1 }.hasOwnProperty("toString")); // → false
 
-Rabbit.prototype.toString = function () {
-	return `a ${this.type} rabbit`;
-};
+// Rabbit.prototype.toString = function () {
+// 	return `a ${this.type} rabbit`;
+// };
 // console.log(String(blackRabbit)); // → a black rabbit
 
-let sym = Symbol("name");
-console.log(sym == Symbol("name")); // → false
-Rabbit.prototype[sym] = 55;
-console.log(blackRabbit[sym]); // → 55
+// let sym = Symbol("name");
+// console.log(sym == Symbol("name")); // → false
+// Rabbit.prototype[sym] = 55;
+// console.log(blackRabbit[sym]); // → 55
 
-const toStringSymbol = Symbol("toString");
-Array.prototype[toStringSymbol] = function () {
-	return `${this.length} cm of blue yarn`;
-};
-console.log([1, 2].toString()); // → 1,2
-console.log([1, 2][toStringSymbol]()); // → 2 cm of blue yarn
+// const toStringSymbol = Symbol("toString");
+// Array.prototype[toStringSymbol] = function () {
+// 	return `${this.length} cm of blue yarn`;
+// };
+// console.log([1, 2].toString()); // → 1,2
+// console.log([1, 2][toStringSymbol]()); // → 2 cm of blue yarn
 
-let stringObject = {
-	[toStringSymbol]() {
-		return "a jute rope";
+// let stringObject = {
+// 	[toStringSymbol]() {
+// 		return "a jute rope";
+// 	},
+// };
+// console.log(stringObject[toStringSymbol]()); // → a jute rope
+
+// let okIterator = "OK"[Symbol.iterator]();
+// console.log(okIterator.next()); // → {value: "O", done: false}
+// console.log(okIterator.next()); // → {value: "K", done: false}
+// console.log(okIterator.next()); // → {value: undefined, done: true}
+
+// class Matrix {
+// 	constructor(width, height, element = (x, y) => undefined) {
+// 		this.width = width;
+// 		this.height = height;
+// 		this.content = [];
+// 		for (let y = 0; y < height; y++) {
+// 			for (let x = 0; x < width; x++) {
+// 				this.content[y * width + x] = element(x, y);
+// 			}
+// 		}
+// 	}
+// 	get(x, y) {
+// 		return this.content[y * this.width + x];
+// 	}
+// 	set(x, y, value) {
+// 		this.content[y * this.width + x] = value;
+// 	}
+// }
+// class MatrixIterator {
+// 	constructor(matrix) {
+// 		this.x = 0;
+// 		this.y = 0;
+// 		this.matrix = matrix;
+// 	}
+// 	next() {
+// 		if (this.y == this.matrix.height) return { done: true };
+// 		let value = {
+// 			x: this.x,
+// 			y: this.y,
+// 			value: this.matrix.get(this.x, this.y),
+// 		};
+// 		this.x++;
+// 		if (this.x == this.matrix.width) {
+// 			this.x = 0;
+// 			this.y++;
+// 		}
+// 		return { value, done: false };
+// 	}
+// }
+
+// Matrix.prototype[Symbol.iterator] = function () {
+// 	return new MatrixIterator(this);
+// };
+
+// let matrix = new Matrix(2, 2, (x, y) => `value ${x},${y}`);
+// for (let { x, y, value } of matrix) {
+// 	console.log(x, y, value);
+// }
+// → 0 0 value 0,0
+// → 1 0 value 1,0
+// → 0 1 value 0,1
+// → 1 1 value 1,1
+
+//Getters, setters and static
+
+let varyingSize = {
+	get size() {
+		return Math.floor(Math.random() * 100);
 	},
 };
-console.log(stringObject[toStringSymbol]()); // → a jute rope
+console.log(varyingSize.size); // → 92
+console.log(varyingSize.size); // → 96
 
-let okIterator = "OK"[Symbol.iterator]();
-console.log(okIterator.next()); // → {value: "O", done: false}
-console.log(okIterator.next()); // → {value: "K", done: false}
-console.log(okIterator.next()); // → {value: undefined, done: true}
-
-class Matrix {
-	constructor(width, height, element = (x, y) => undefined) {
-		this.width = width;
-		this.height = height;
-		this.content = [];
-		for (let y = 0; y < height; y++) {
-			for (let x = 0; x < width; x++) {
-				this.content[y * width + x] = element(x, y);
-			}
-		}
+class Temperature {
+	constructor(celsius) {
+		this.celsius = celsius;
 	}
-	get(x, y) {
-		return this.content[y * this.width + x];
+	get fahrenheit() {
+		return this.celsius * 1.8 + 32;
 	}
-	set(x, y, value) {
-		this.content[y * this.width + x] = value;
+	set fahrenheit(value) {
+		this.celsius = (value - 32) / 1.8;
+	}
+	static fromFahrenheit(value) {
+		return new Temperature((value - 32) / 1.8);
 	}
 }
-class MatrixIterator {
-	constructor(matrix) {
-		this.x = 0;
-		this.y = 0;
-		this.matrix = matrix;
-	}
-	next() {
-		if (this.y == this.matrix.height) return { done: true };
-		let value = {
-			x: this.x,
-			y: this.y,
-			value: this.matrix.get(this.x, this.y),
-		};
-		this.x++;
-		if (this.x == this.matrix.width) {
-			this.x = 0;
-			this.y++;
-		}
-		return { value, done: false };
-	}
-}
+let temp = new Temperature(22);
+console.log(temp.fahrenheit); // → 71.6temp.fahrenheit = 86;
+console.log(temp.celsius); // → 30
