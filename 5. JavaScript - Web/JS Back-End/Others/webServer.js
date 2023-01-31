@@ -1,14 +1,16 @@
 const http = require("http");
 
 const server = http.createServer((req, res) => {
-	const url = new URL(req.url);
-
-	switch (url.pathname) {
+	res.writeHead(200, {
+		"content-type": "text/plain",
+	});
+	switch (req.url) {
 		case "/":
-			res.write("Hello from NodeJS!");
+			res.write("<h1>Hello from NodeJS!</h1>");
 			break;
 		case "/cats":
 			res.write("Some cats here");
+			break;
 		default:
 			res.write("Anything else");
 			break;
