@@ -1,0 +1,140 @@
+#subscribe {
+	padding: 70px 0;
+	text-align: center;
+	background-color: #ddb37d;
+	margin: 0 auto;
+	clip-path: polygon(0 93%, 0% 0%, 100% 0%, 100% 90%, 96% 91%, 92% 92%, 88% 94%, 83% 95%, 78% 95%, 74% 93%, 70% 91%, 66% 92%, 63% 96%, 61% 95%, 57% 95%, 54% 93%, 50% 93%, 47% 92%, 43% 91%, 40% 93%, 38% 95%, 35% 94%, 32% 93%, 28% 92%, 25% 93%, 21% 95%, 17% 94%, 14% 93%, 9% 93%, 7% 93%, 4% 93%, 2% 91%);
+	margin-bottom: 70px;
+}
+
+#subscribe .container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	justify-content: center;
+	align-items: center;
+}
+
+#subscribe h3 {
+	font-size: 75px;
+	color: #ffffff;
+	font-weight: 700;
+	font-family: "Open Sans Bold";
+	text-align: center;
+	margin: 0 auto;
+}
+
+#subscribe p {
+	height: 180px;
+	font-size: 30px;
+	color: #54524f;
+	font-weight: 400;
+	font-family: "Open Sans Regular";
+	text-align: center;
+	margin-top: 50px;
+}
+
+#subscribe .button {
+	display: flex;
+	flex-direction: row;
+	font-size: 30px;
+	justify-content: center;
+	margin-bottom: 45px;
+	position: relative;
+}
+
+#subscribe .button button {
+	font-size: 25px;
+	text-transform: uppercase;
+	color: #ffffff;
+	font-weight: 700;
+	font-family: "Open Sans Regular";
+	text-align: center;
+	width: 222px;
+	height: 65px;
+	border-radius: 32px;
+	background-color: #54524f;
+	border: none;
+	padding: 0 1.5em;
+	position: absolute;
+	margin-left: 570px;
+}
+
+#subscribe .button input {
+	width: 750px;
+	height: 63px;
+	background-color: #ffffff;
+	border-radius: 32px;
+	border: none;
+	opacity: 0.678;
+	font-size: 25px;
+	color: #54524f;
+	font-weight: 400;
+	font-family: "Open Sans Regular";
+	text-align: left;
+	text-indent: 25px;
+}
+
+@media only screen and (max-width: 992px) {
+	#subscribe h3 {
+		font-size: 70px;
+	}
+
+	#subscribe .button input {
+		width: 600px;
+	}
+
+	#subscribe .button button {
+		margin-left: 400px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#subscribe h3 {
+		font-size: 30px;
+	}
+
+	#subscribe p {
+		height: 100px;
+		font-size: 16px;
+		margin-top: 20px;
+	}
+
+	#subscribe .button input {
+		width: 400px;
+		height: 40px;
+		font-size: 14px;
+	}
+
+	#subscribe .button button {
+		font-size: 20px;
+		width: 120px;
+		height: 40px;
+		margin-left: 300px;
+		font-size: 14px;
+	}
+}
+
+@media only screen and(max-width: 576px) {
+	#subscribe h3 {
+		font-size: 25px;
+	}
+
+	#subscribe p {
+		font-size: 14px;
+		margin-top: 15px;
+	}
+
+	#subscribe .button input {
+		width: 80px;
+		height: 30px;
+	}
+
+	#subscribe .button button {
+		font-size: 14px;
+		width: 10px;
+		height: 30px;
+		margin-left: 50px;
+	}
+}

@@ -1,0 +1,97 @@
+#hiking {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	clip-path: polygon(0% 9%, 1% 9%, 2% 10%, 3% 11%, 4% 10%, 4% 10%, 6% 10%, 7% 10%, 8% 10%, 9% 11%, 10% 12%, 11% 12%, 13% 11%, 15% 11%, 16% 11%, 17% 12%, 19% 13%, 21% 14%, 22% 13%, 24% 13%, 25% 12%, 26% 12%, 28% 12%, 29% 13%, 30% 14%, 33% 14%, 34% 14%, 36% 13%, 37% 13%, 39% 13%, 40% 13%, 42% 15%, 43% 14%, 44% 13%, 46% 12%, 47% 13%, 48% 13%, 50% 13%, 53% 14%, 54% 15%, 55% 16%, 57% 16%, 58% 14%, 60% 14%, 61% 16%, 62% 16%, 64% 17%, 66% 17%, 68% 15%, 68% 14%, 70% 13%, 71% 11%, 73% 11%, 74% 11%, 76% 13%, 77% 11%, 78% 11%, 80% 10%, 81% 11%, 82% 12%, 83% 12%, 84% 12%, 85% 12%, 88% 10%, 88% 12%, 90% 12%, 91% 12%, 93% 11%, 95% 12%, 97% 10%, 98% 10%, 98% 11%, 99% 12%, 100% 13%, 100% 13%, 100% 92%, 99% 93%, 97% 93%, 96% 93%, 95% 93%, 93% 92%, 91% 92%, 90% 91%, 90% 91%, 88% 92%, 86% 93%, 82% 94%, 82% 94%, 81% 94%, 78% 93%, 77% 92%, 76% 91%, 74% 91%, 72% 93%, 70% 94%, 69% 94%, 68% 93%, 66% 93%, 63% 92%, 61% 91%, 60% 92%, 59% 94%, 57% 94%, 56% 93%, 55% 93%, 54% 93%, 53% 92%, 53% 91%, 51% 90%, 50% 91%, 48% 91%, 46% 92%, 45% 93%, 43% 93%, 41% 93%, 40% 92%, 39% 92%, 38% 93%, 36% 93%, 34% 94%, 33% 93%, 31% 92%, 30% 94%, 28% 92%, 27% 91%, 25% 91%, 24% 90%, 22% 90%, 20% 92%, 19% 93%, 16% 93%, 15% 93%, 13% 93%, 12% 93%, 11% 93%, 9% 93%, 7% 91%, 7% 92%, 6% 92%, 4% 93%, 3% 94%, 2% 94%, 0% 92%, 0% 91%);
+}
+
+#hiking .container {
+	display: flex;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	background-color: #99928c;
+	background-image: url(../images/shadows/shadow_left_flipped_rotated.png);
+	background-repeat: no-repeat;
+	background-position: -55% 0;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 330px;
+	padding-bottom: 210px;
+}
+
+#hiking h3 {
+	font-size: 58px;
+	color: #ffffff;
+	font-weight: 600;
+	font-family: "Open Sans Regular";
+}
+
+#hiking p {
+	font-size: 29px;
+	color: #dbdbdb;
+	text-align: center;
+	font-weight: 400;
+	font-family: "Open Sans Regular";
+	margin-top: 20px;
+}
+
+@media only screen and (max-width: 992px) {
+	#hiking .container {
+		background-image: none;
+	}
+	#hiking .container {
+		padding-top: 150px;
+		padding-bottom: 100px;
+	}
+
+	#hiking h3 {
+		font-size: 48px;
+	}
+
+	#hiking p {
+		font-size: 24px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#hiking .container {
+		padding-top: 180px;
+		padding-bottom: 120px;
+	}
+
+	#hiking h3 {
+		font-size: 42px;
+	}
+
+	#hiking p {
+		font-size: 24px;
+	}
+}
+
+@media only screen and(max-width: 576px) {
+	#hiking {
+		display: flex;
+		justify-content: center;
+	}
+
+	#hiking .container {
+		display: flex;
+		text-align: center;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 200px;
+		padding-bottom: 100px;
+	}
+
+	#hiking h3 {
+		font-size: 36px;
+	}
+
+	#hiking p {
+		font-size: 18px;
+		margin-top: 10px;
+		line-height: 1.5;
+	}
+}

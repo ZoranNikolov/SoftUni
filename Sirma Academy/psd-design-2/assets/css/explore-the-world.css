@@ -1,0 +1,89 @@
+#explore-the-world {
+	background-image: url(../images/explore-the-world/background-image.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin: 0 auto;
+	display: flex;
+	clip-path: polygon(0% 9%, 1% 9%, 2% 10%, 3% 11%, 4% 10%, 4% 10%, 6% 10%, 7% 10%, 8% 10%, 9% 11%, 10% 12%, 11% 12%, 13% 11%, 15% 11%, 16% 11%, 17% 12%, 19% 13%, 21% 14%, 22% 13%, 24% 13%, 25% 12%, 26% 12%, 28% 12%, 29% 13%, 30% 14%, 33% 14%, 34% 14%, 36% 13%, 37% 13%, 39% 13%, 40% 13%, 42% 15%, 43% 14%, 44% 13%, 46% 12%, 47% 13%, 48% 13%, 50% 13%, 53% 14%, 54% 15%, 55% 16%, 57% 16%, 58% 14%, 60% 14%, 61% 16%, 62% 16%, 64% 17%, 66% 17%, 68% 15%, 68% 14%, 70% 13%, 71% 11%, 73% 11%, 74% 11%, 76% 13%, 77% 11%, 78% 11%, 80% 10%, 81% 11%, 82% 12%, 83% 12%, 84% 12%, 85% 12%, 88% 10%, 88% 12%, 90% 12%, 91% 12%, 93% 11%, 95% 12%, 97% 10%, 98% 10%, 98% 11%, 99% 12%, 100% 13%, 100% 13%, 100% 92%, 99% 93%, 97% 93%, 96% 93%, 95% 93%, 93% 92%, 91% 92%, 90% 91%, 90% 91%, 88% 92%, 86% 93%, 82% 94%, 82% 94%, 81% 94%, 78% 93%, 77% 92%, 76% 91%, 74% 91%, 72% 93%, 70% 94%, 69% 94%, 68% 93%, 66% 93%, 63% 92%, 61% 91%, 60% 92%, 59% 94%, 57% 94%, 56% 93%, 55% 93%, 54% 93%, 53% 92%, 53% 91%, 51% 90%, 50% 91%, 48% 91%, 46% 92%, 45% 93%, 43% 93%, 41% 93%, 40% 92%, 39% 92%, 38% 93%, 36% 93%, 34% 94%, 33% 93%, 31% 92%, 30% 94%, 28% 92%, 27% 91%, 25% 91%, 24% 90%, 22% 90%, 20% 92%, 19% 93%, 16% 93%, 15% 93%, 13% 93%, 12% 93%, 11% 93%, 9% 93%, 7% 91%, 7% 92%, 6% 92%, 4% 93%, 3% 94%, 2% 94%, 0% 92%, 0% 91%);
+}
+
+#explore-the-world .container {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 500px;
+	margin-right: 120px;
+	padding-bottom: 440px;	
+}
+
+#explore-the-world .container .text-wrapper h3:first-of-type {
+	font-size: 76px;
+	color: #deb37e;
+	font-weight: 800;
+	font-style: italic;
+	font-family: "Open Sans Extra Bold";
+	text-align: right;
+	filter: drop-shadow(2.575px -4.286px 2.5px rgba(84, 82, 79, 0.36));
+	line-height: 1;
+}
+
+#explore-the-world .container .text-wrapper h3:last-of-type {
+	font-size: 85px;
+	color: #54524f;
+	font-weight: 800;
+	font-style: italic;
+	font-family: "Open Sans Extra Bold";
+	text-align: right;
+	filter: drop-shadow(2.575px -4.286px 2.5px rgba(84, 82, 79, 0.36));
+}
+
+@media only screen and (max-width: 992px) {
+	#explore-the-world .container {
+		margin-top: 100px;
+		justify-content: center;
+		padding-top:30px;
+		margin-right: 0;
+	}
+
+	#explore-the-world .container .text-wrapper h3:first-of-type {
+		font-size: 58px;
+		line-height: 1.2;
+	}
+
+	#explore-the-world .container .text-wrapper h3:last-of-type {
+		font-size: 68px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#explore-the-world .container {
+		margin-top: 80px;
+		padding-top:50px;
+	}
+
+	#explore-the-world .container .text-wrapper h3:first-of-type {
+		font-size: 42px;
+	}
+
+	#explore-the-world .container .text-wrapper h3:last-of-type {
+		font-size: 52px;
+	}
+}
+
+@media only screen and(max-width: 576px) {
+	#explore-the-world .container {
+		margin-top: 200px;
+		margin-right: 30px;
+		margin-left: 30px;
+		padding-bottom: 220px;
+	}
+
+	#explore-the-world .container .text-wrapper h3:first-of-type {
+		font-size: 36px;
+	}
+
+	#explore-the-world .container .text-wrapper h3:last-of-type {
+		font-size: 48px;
+	}
+}

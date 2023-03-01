@@ -1,0 +1,171 @@
+#two {
+	text-align: center;
+	margin-bottom: 400px;
+	margin: 0 auto;
+	background-color: #ddb37d;
+}
+
+#two .wrapper {
+	padding: 70px 0;
+	background-image: url(../images/shadows/shadow_right.png);
+	background-repeat: no-repeat;
+	background-position: 137% 87%;
+	clip-path: polygon(0 90%, 0% 0%, 100% 0%, 100% 88%, 97% 90%, 94% 90%, 92% 88%, 90% 89%, 89% 89%, 87% 90%, 86% 89%, 85% 89%, 83% 89%, 81% 88%, 80% 89%, 79% 89%, 78% 90%, 76% 90%, 73% 90%, 71% 89%, 67% 90%, 64% 90%, 63% 92%, 61% 91%, 59% 92%, 57% 90%, 55% 92%, 54% 91%, 52% 93%, 50% 92%, 47% 91%, 45% 93%, 41% 92%, 37% 92%, 33% 91%, 28% 93%, 25% 91%, 21% 92%, 17% 93%, 15% 93%, 11% 93%, 8% 93%, 6% 92%, 4% 92%, 2% 92%, 0 93%);
+	background-color: #fff;
+}
+
+#two .container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	text-align: left;
+	margin: 0 auto;
+}
+
+#two .container div {
+	max-width: 30%;
+}
+
+#two .container h4 {
+	font-size: 33px;
+	line-height: 33px;
+	color: #deb37e;
+	font-weight: 700;
+	font-family: "Open Sans Bold";
+}
+
+#two .container p {
+	font-size: 19px;
+	line-height: 25px;
+	color: #333d42;
+	font-weight: 400;
+	font-family: "Open Sans Regular";
+	padding-top: 30px;
+}
+
+#two .single-quote {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	margin: 0 auto;
+	margin-top: 250px;
+	margin-bottom: 100px;
+}
+
+#two .single-quote p:nth-child(1) {
+	font-size: 100px;
+	color: #3f3f3f;
+	font-weight: 700;
+	font-family: "Open Sans Bold";
+	text-align: center;
+	line-height: 1;
+}
+
+#two .single-quote p:nth-child(2) {
+	font-size: 25px;
+	color: #3f3f3f;
+	font-weight: 600;
+	font-family: "Open Sans Regular";
+	text-align: center;
+}
+
+#two .single-quote p:nth-child(3) {
+	font-size: 21px;
+	line-height: 33px;
+	color: #3f3f3f;
+	font-weight: 700;
+	font-family: "Open Sans Regular";
+	text-align: center;
+	margin: 30px;
+}
+
+@media only screen and (max-width: 992px) {
+	#two {
+		background-image: none;
+	}
+
+	#two .wrapper {
+		background-image: none;
+	}
+
+	#two .container {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#two .container div {
+		max-width: 100%;
+		margin-bottom: 50px;
+	}
+
+	#two .single-quote {
+		margin-top: 125px;
+	}
+
+	#two .single-quote p:nth-child(1) {
+		font-size: 80px;
+	}
+
+	#two .single-quote p:nth-child(2) {
+		font-size: 21px;
+	}
+
+	#two .single-quote p:nth-child(3) {
+		font-size: 19px;
+		line-height: 25px;
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+	#two .container {
+		flex-direction: column;
+	}
+
+	#two .container div {
+		max-width: 50%;
+	}
+
+	#two .single-quote {
+		margin-top: 125px;
+	}
+
+	#two .single-quote p:nth-child(1) {
+		font-size: 60px;
+	}
+
+	#two .single-quote p:nth-child(2) {
+		font-size: 19px;
+	}
+
+	#two .single-quote p:nth-child(3) {
+		font-size: 17px;
+		line-height: 25px;
+	}
+}
+
+@media only screen and(max-width: 576px) {
+
+	#two .container div {
+		margin-bottom: 30px;
+	}
+
+	#two .single-quote {
+		margin-top: 150px;
+	}
+
+	#two .single-quote p:nth-child(1) {
+		font-size: 50px;
+	}
+
+	#two .single-quote p:nth-child(2) {
+		font-size: 19px;
+	}
+
+	#two .single-quote p:nth-child(3) {
+		font-size: 16px;
+	}
+}
