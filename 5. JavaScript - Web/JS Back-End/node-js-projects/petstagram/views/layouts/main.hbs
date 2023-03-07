@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="/static/css/styles.css">
+	<link rel="icon" type="image/x-icon" href="/static/images/free-30-instagram-stories-icons23_122570.png">
+	<title>Petstagram</title>
+</head>
+
+<body>
+	{{#if error}}
+	<div>
+		<div class="errorContainer">
+			<p>{{error}}</p>
+		</div>
+	</div>
+	{{/if}}
+
+	<header>
+		<nav class="navbar">
+			<div class="container">
+				<div class="logo">
+					<a href="#">
+						<img width="50px" src="/static/images/free-30-instagram-stories-icons23_122570.png" alt="img1">
+					</a>
+					<a class="home" href="/">
+						<i>Petstagram</i>
+					</a>
+				</div>
+
+				<div class="nav-links">
+					<ul class="nav-group">
+						<li class="nav-item">
+
+							<a href="/photo/catalog">
+								<i>Catalog</i>
+							</a>
+						</li>
+						{{#if isAuthenticated}}
+						<li class="nav-item">
+							<a href="/photo/create">
+								<i>Add Photo</i>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="#">
+								<i>Profile</i>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="/logout">
+								<i>Logout</i>
+							</a>
+						</li>
+						{{else}}
+						<li class="nav-item">
+							<a href="/login">
+								<i>Login</i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/register">
+								<i>Register</i>
+							</a>
+						</li>
+						{{/if}}
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	{{{body}}}
+	<div class="footer">
+		<span class="footer-section">
+			© 2023 SoftUni Back-End Exam
+		</span>
+	</div>
+
+</body>
+
+</html>

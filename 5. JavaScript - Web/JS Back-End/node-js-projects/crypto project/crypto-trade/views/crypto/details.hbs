@@ -1,0 +1,35 @@
+<main>
+	<section id="details-info">
+		<h1>Details</h1>
+		<div class="coin-image">
+			<img src="{{crypto.image}}">
+		</div>
+
+		<div class="coin-info">
+			<div class="coin-text">
+				<h1 id="name">{{crypto.name}}</h1>
+				<h3 id="payment">Payment method: {{crypto.paymentMethod}}</h3>
+				<p id="price"><span>Price: ${{crypto.price}}</span></p>
+				<p id="description">{{crypto.description}}</p>
+			</div>
+			<div class="product-btn">
+				<!--Only for registered user and author of the publication -->
+				{{#if isAuthenticated}}
+					{{#if isOwner}}
+					<div class="author">
+						<a href="/crypto/{{crypto._id}}/edit" class="btn-edit">Edit</a>
+						<a href="/crypto/{{crypto._id}}/delete" class="btn-delete">Delete</a>
+					</div>
+					{{else}}
+						{{#if isBuyer}}
+							<p class="buy-message">You already bought these crypto coins.</p>
+						{{else}}
+							<!-- Logged in user who has already buy this crypto-->
+							<a href="/crypto/{{crypto._id}}/buy" class="btn-buy">Buy</a>
+						{{/if}}
+					{{/if}}
+				{{/if}}
+			</div>
+		</div>
+	</section>
+</main>
