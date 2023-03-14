@@ -1,0 +1,102 @@
+{
+  "1": {
+      "_id": "1",
+      "text": "Give dog a bath",
+      "isCompleted": true
+  },
+  "2": {
+      "_id": "2",
+      "text": "Do laundry",
+      "isCompleted": true
+  },
+  "3": {
+      "_id": "3",
+      "text": "Vacuum floor",
+      "isCompleted": false
+  },
+  "4": {
+      "_id": "4",
+      "text": "Feed cat",
+      "isCompleted": true
+  },
+  "5": {
+      "_id": "5",
+      "text": "Change light bulbs",
+      "isCompleted": false
+  },
+  "6": {
+      "_id": "6",
+      "text": "Go to Store",
+      "isCompleted": true
+  },
+  "7": {
+      "_id": "7",
+      "text": "Fill gas tank",
+      "isCompleted": true
+  },
+  "8": {
+      "_id": "8",
+      "text": "Change linens",
+      "isCompleted": false
+  },
+  "9": {
+      "_id": "9",
+      "text": "Rake leaves",
+      "isCompleted": true
+  },
+  "10": {
+      "_id": "10",
+      "text": "Bake Cookies",
+      "isCompleted": false
+  },
+  "11": {
+      "_id": "11",
+      "text": "Take nap",
+      "isCompleted": true
+  },
+  "12": {
+      "_id": "12",
+      "text": "Read book",
+      "isCompleted": true
+  },
+  "13": {
+      "_id": "13",
+      "text": "Exercise",
+      "isCompleted": false
+  },
+  "14": {
+      "_id": "14",
+      "text": "Give dog a bath",
+      "isCompleted": false
+  },
+  "15": {
+      "_id": "15",
+      "text": "Do laundry",
+      "isCompleted": false
+  },
+  "16": {
+      "_id": "16",
+      "text": "Vacuum floor",
+      "isCompleted": false
+  },
+  "17": {
+      "_id": "17",
+      "text": "Feed cat",
+      "isCompleted": true
+  },
+  "18": {
+      "_id": "18",
+      "text": "Change light bulbs",
+      "isCompleted": false
+  },
+  "19": {
+      "_id": "19",
+      "text": "Go to Store",
+      "isCompleted": false
+  },
+  "20": {
+      "_id": "20",
+      "text": "Fill gas tank",
+      "isCompleted": false
+  }
+}
