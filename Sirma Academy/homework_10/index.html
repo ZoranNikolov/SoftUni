@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="app.css">
+	<title>Currency Converter</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="convertion-container">
+			<h1>Currency Converter</h1>
+			<form>
+				<div>
+					<label for="amount">Amount:</label>
+					<input type="text" id="amount" required>
+				</div>
+				<div>
+					<label for="from-currency">From currency:</label>
+					<select id="from-currency" class="dropdown-currency" name="from-currency" required>
+					</select>
+				</div>
+				<div>
+					<label for="to-currency">To currency:</label>
+					<select id="to-currency" class="dropdown-currency" name="to-currency" required>
+					</select>
+				</div>
+				<div>
+					<input type="submit" class="convert-btn" value="Convert">
+				</div>
+			</form>
+		</div>
+		<div class="message-container">
+		</div>
+		<div class="rates-wrapper">
+			<div>
+				<label for="currency-rates">Currency Rates:</label>
+				<select id="currency-rates" class="dropdown-currency">
+				</select>
+			</div>
+			<div class="button-container">
+				<input type="submit" class="show-btn" value="Show Rates">
+			</div>
+		</div>
+		<div class="currency-rates-result hidden"></div>
+	</div>
+	<script src="index.js"></script>
+</body>
+
+</html>
