@@ -1,0 +1,31 @@
+.container {
+	text-align: center;
+}
+
+.container li {
+	display: inline;
+	padding: 10px;
+	text-align: left;
+	list-style: none;
+}
+
+.container a {
+  position: relative;
+  text-decoration: none;
+}
+
+.container a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 3px;
+  width: 0;
+  background-color: #030303;
+  transition: width 1s ease-out;
+}
+
+.container a:hover::before {
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+}

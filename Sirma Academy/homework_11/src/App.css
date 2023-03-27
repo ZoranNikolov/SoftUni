@@ -1,0 +1,16 @@
+.App {
+	padding: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+th {
+	background-color: #d6eeee;
+}
+
+tbody td {
+	background-color: rgba(128, 128, 128, 0.122);
+}

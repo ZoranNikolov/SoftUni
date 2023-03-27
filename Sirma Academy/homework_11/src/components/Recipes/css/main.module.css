@@ -1,0 +1,35 @@
+@font-face {
+	font-family: 'barbariska';
+	src: url('../fonts/RFBarbariskarough2-Regular.woff') format('woff');
+}
+
+.container {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.4em;
+}
+
+.container a {
+	text-decoration: none;
+	color: black;
+}
+
+.container h1 {
+	font-family: "barbariska";
+	font-size: 3.5em;
+	text-shadow: 3px 4px 7px #242917a0;
+	letter-spacing: 0.1em;
+}
+
+.container h3 {
+	font-size: 1.5em;
+	letter-spacing: 0.1em;
+}
+
+.container cite {
+	letter-spacing: 0.1em;
+}
+
+.container ul>li,
+.container ol>li {
+	letter-spacing: 0.05em
+}
