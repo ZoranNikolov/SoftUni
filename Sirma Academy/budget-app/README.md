@@ -14,6 +14,10 @@ the amount of transaction and the date it was committed.
 
 In the project directory, you can run:
 
+### `npm i`
+
+Installs the necessary packages to run the app
+
 ### `npm start`
 
 Runs the app in browser in http://localhost:3000/

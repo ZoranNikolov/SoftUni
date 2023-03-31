@@ -99,9 +99,9 @@ button:not(.close-btn):not(.delete-btn):nth-child(even):hover {
 }
 
 .add-transaction-component form .date-picker {
-	background-color: #f1f1f1;
-	width: 30%;
-	text-align: center;
+    background-color: #f1f1f1;
+    width: 45%;
+    text-align: center;
 }
 
 .add-transaction-component form input[type="submit"] {
