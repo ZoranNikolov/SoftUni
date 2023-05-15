@@ -1,0 +1,57 @@
+html {
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+body {
+	margin: 75px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Georgia, serif;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid lightgray;
+
+}
+
+thead th {
+	background-color: lightgray;
+	text-align: left;
+	padding: 10px;
+}
+
+tbody tr:nth-child(even) {
+	background-color: white;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: rgba(211, 211, 211, 0.5);
+}
+
+td {
+	padding: 10px;
+	border: 1px solid lightgray;
+}
+
+blockquote {
+	font-style: italic;
+	border-left: 4px solid  rgb(221,221,221);
+	padding: 20px;
+	margin-left: -10px;
+	padding-left: 30px;
+}
+
+figcaption {
+	text-align: right;
+	margin-right: -50px;
+}

@@ -1,4 +1,4 @@
-@import url('/font-awesome-4.6.3/css/font-awesome.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css');
 
 body {
 	font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
