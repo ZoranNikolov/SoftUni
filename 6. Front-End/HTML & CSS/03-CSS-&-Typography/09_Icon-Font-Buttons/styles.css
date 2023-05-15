@@ -1,1 +1,33 @@
-/* TODO: style the html */
+@import url('/font-awesome-4.6.3/css/font-awesome.min.css');
+
+body {
+	font-family: Arial, serif;
+	line-height: 3px;
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+	border-radius: 5.4px;
+	padding: 12.6px 27px;
+}
+
+a:hover {
+	color: #eee;
+}
+
+i {
+	padding-right: 5.4px;
+}
+
+.green {
+	background-color: green;
+}
+
+.orange {
+	background-color: orange;
+}
