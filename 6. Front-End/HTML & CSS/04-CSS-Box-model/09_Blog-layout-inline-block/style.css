@@ -1,0 +1,26 @@
+body {
+	background-color: rgb(238, 238, 238);
+	margin: 20px 30px;
+	font-family: Helvetica, sans-serif;
+	color: rgb(51, 51, 51);
+}
+
+img {
+	width: 500px;
+}
+
+h1 {
+	display: inline-block;
+}
+
+aside {
+	float: right;
+	box-sizing: border-box;
+	position: relative;
+	right: 350px;
+	width: 300px;
+}
+
+header,section, footer {
+	width: 800px;
+}
