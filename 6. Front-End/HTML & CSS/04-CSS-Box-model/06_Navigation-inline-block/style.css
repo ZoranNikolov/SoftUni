@@ -1,0 +1,26 @@
+html {
+	font-family: Helvetica, sans-serif;
+}
+
+body {
+	margin: 30px 60px;
+}
+
+h1,
+nav,
+li {
+	display: inline-block;
+}
+
+h1 {
+	margin-right: 100px;
+}
+
+li {
+	margin-right: 30px;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(6, 159, 6);
+}
