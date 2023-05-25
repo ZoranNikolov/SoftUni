@@ -1,1 +1,43 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+img {
+	width: 200px;
+}
+
+div:first-of-type {
+	background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(6, 214, 40, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+div:last-of-type {
+	background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.viewport {
+	height: 50%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+section {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+
+i {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	color: white;
+}
