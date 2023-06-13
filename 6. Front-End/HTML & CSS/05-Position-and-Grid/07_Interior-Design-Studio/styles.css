@@ -1,1 +1,13 @@
-//TODO
+body {
+	position: relative;
+	background-size: cover;
+}
+
+h1 {
+	text-transform: capitalize;
+	position: absolute;
+	top: 60px;
+	left: 180px;
+	color: antiquewhite;
+	text-shadow: 1px 1px 20px black;
+}
