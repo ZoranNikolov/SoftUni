@@ -1,0 +1,57 @@
+div,
+section {
+	display: flex;
+	align-items: center;
+}
+
+div {
+	max-width: 65vw;
+}
+
+span {
+	border: 1px solid black;
+}
+
+.notes {
+	flex-direction: column;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.week {
+	display: flex;
+	max-width: 600px;
+	flex-wrap: wrap;
+}
+
+
+.week * {
+	height: 120px;
+	width: 120px;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.week :nth-child(1),
+.week :nth-child(7) {
+	width: 600px;
+}
+
+.week :nth-child(8),
+.week :nth-child(9) {
+	width: 300px;
+}
+
+.notes {
+	display: flex;
+	flex-direction: column;
+}
+
+.notes * {
+	width: 240px;
+	height: 240px;
+	text-align: center;
+	padding-top: 20px;
+}
