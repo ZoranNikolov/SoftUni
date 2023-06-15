@@ -1,0 +1,34 @@
+body header {
+	border-bottom: 2px solid rgb(0, 0, 0);
+	display: flex;
+}
+
+h1 {
+	margin: 0px;
+}
+
+header nav ul {
+	display: flex;
+	gap: 10px;
+	margin: 0px;
+	position: relative;
+	left: 1050px;
+}
+
+h1,
+ul {
+	padding: 10px;
+}
+
+header nav ul li a {
+	color: rgb(0, 153, 0);
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+header>h1 {
+	text-transform: uppercase;
+}
