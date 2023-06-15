@@ -1,0 +1,40 @@
+body,
+ul,
+li {
+	display: flex;
+}
+
+body {
+	background-color: lightgray;
+	justify-content: center;
+	align-items: center;
+}
+
+ul {
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+li {
+	justify-content: center;
+	align-items: center;
+	height: 300px;
+	width: 200px;
+	border: 6px solid black;
+	background-color: white;
+	box-shadow:
+		0 0 5px rgba(0, 0, 0, 0.5),
+		inset 0 0 5px rgba(0, 0, 0, 0.5);
+	padding: 5px;
+	margin-bottom: 50px;
+}
+
+.gallery {
+	width: 800px;
+}
+
+img {
+	object-fit: cover;
+	width: 180px;
+	height: auto;
+}
