@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap');
+
+body {
+	font-family: Inter, serif;
+	background-color: lightgrey;
+	display: flex;
+	justify-content: center;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	margin: 60px 30px;
+	box-shadow: 5px 5px 7px 7px rgba(0, 0, 0, 0.1);
+}
+
+article {
+	margin: 20px 30px;
+}
+
+section img {
+	height: 200px;
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer p,
+footer time {
+	display: inline-block;
+	text-align: center;
+}
+
+main {
+	border-bottom: 1px solid black;
+	margin-bottom: 15px;
+}
+
+div.profile img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.profile {
+	display: flex;
+	gap: 5px;
+	text-align: center;
+	align-items: center;
+}
+
+header,
+main,
+footer {
+	padding-bottom: 10px;
+}
+
+h4 {
+	color: rgba(0, 0, 0, 0.7);
+	margin: 0;
+}
+
+header p {
+	font-size: 24px;
+	margin: 0;
+	line-height: 2.5;
+}
+
+main p {
+	margin-top: 0;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+time {
+	color: rgba(0, 0, 0, 0.4);
+}

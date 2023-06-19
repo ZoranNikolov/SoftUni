@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap');
+
+body {
+	font-family: Inter, serif;
+	margin: 0;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	font-size: 20px;
+}
+
+ul {
+	display: flex;
+	flex-direction: row;
+	gap: 50px;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: black
+}
+
+header div {
+	display: flex;
+}
+
+header div button {
+	font-size: 20px;
+	background-color: white;
+	border: none;
+}
+
+.sign-up,
+.login {
+	padding: 10px 20px;
+}
+
+.sign-up {
+	background-color: #ade2df;
+	border-radius: 6px;
+}
+
+article.intro {
+	background-color: #ade2df;
+	display: flex;
+	flex-direction: column;
+}
+
+section.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	padding-bottom: 60px;
+}
+
+section.intro h1 {
+	font-size: 60px;
+	margin-bottom: 5px;
+}
+
+section.intro p {
+	font-size: 1.1em;
+	margin-bottom: 40px;
+}
+
+.buttons {
+	display: flex;
+	gap: 15px;
+}
+
+.buttons button {
+	background-color: black;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	padding: 25px 45px;
+	font-weight: 600;
+}
+
+section.stats {
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	gap: 0px;
+}
+
+.stats-details {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	align-items: center;
+	gap: 10px;
+	border: 1px solid rgba(128, 128, 128, 0.455);
+	border-top: none;
+	border-bottom: none;
+	margin-top: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.stats-details h3 {
+	font-size: 1.8em;
+}
+
+.stats-details p {
+	text-align: center;
+}
+
+article.phone {
+	background-color: #ade2df;
+	display: flex;
+	justify-content: center;
+}
+
+section.phone {
+	border: 1px dashed rgba(0, 0, 0, 0.505);
+}
+
+section.phone img {
+	object-fit: contain;
+	width: 300px;
+}
+
+article.phone section.text {
+	display: flex;
+	flex-direction: column;
+	padding: 40px 75px;
+	width: 400px;
+}
+
+article.phone section.text h2 {
+	font-size: 2.5rem;
+	margin-bottom: 10px;
+}
+
+article.phone section.text h4 {
+	margin-bottom: 0px;
+}
+
+article.phone section.text a {
+	text-decoration: underline;
+	margin-top: 20px
+}
+
+article.pricing {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 50px;
+	background-color: whitesmoke;
+}
+
+article.pricing .pricing {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+article.pricing button.pricing {
+	background-color: #ade2df;
+	width: 100px;
+	border-radius: 6px;
+	border: none;
+	padding: 5px 10px;
+}
+
+article.pricing section.info {
+	display: flex;
+}
+
+section.info ul {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+}
+
+section.info {
+	background-color: white;
+	border-radius: 6px;
+}
+
+section.info div {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+section.info div button {
+	background-color: #ade2df;
+	width: 220px;
+	border-radius: 6px;
+	border: none;
+	padding: 5px 10px;
+}
+
+article.end {
+	margin-top: 30px;
+	background-color: #ade2df;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 50px 500px;
+	text-align: center;
+}
+
+article.end h2 {
+	font-size: 2rem;
+}
